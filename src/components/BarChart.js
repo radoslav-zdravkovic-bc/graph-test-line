@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as d3 from "d3";
-import * as scale from "d3-scale";
+//import * as scale from "d3-scale";
 
 class BarChart extends Component {
     componentDidMount() {
@@ -9,7 +9,7 @@ class BarChart extends Component {
 
     drawChart() {
         // LINE CHART
-        const {data, width, height, id} = this.props;
+        const {data, width, height} = this.props;
         const margin = 20;
 
         let singleData = [...data[0].coordinates];
@@ -18,9 +18,9 @@ class BarChart extends Component {
         const h = height - 2 * margin, w = width - 2 * margin;
 
         //number formatter
-        const xFormat = d3.format('.2');
+        //const xFormat = d3.format('.2');
 
-        const color = d3.scaleOrdinal(d3.schemeCategory10);
+        //const color = d3.scaleOrdinal(d3.schemeCategory10);
 
         //x scale
         const x = d3.scaleLinear()
@@ -36,7 +36,7 @@ class BarChart extends Component {
         var yAxis = d3.axisLeft(y).ticks(10);
 
         // xData gives an array of distinct 'Weeks' for which trends chart is going to be made.
-        const xData = data[0].coordinates.map(function (d) { return d.a; });
+        //const xData = data[0].coordinates.map(d => d.a);
 
         //line generator: each point is [x(d.a), y(d.b)] where d is a row in data
         // and x, y are scales (e.g. x(10) returns pixel value of 10 scaled by x)
@@ -45,8 +45,8 @@ class BarChart extends Component {
                 .attr("height", "540");
 
         const line = d3.line()
-                .x(function (d) { return x(d.a); })
-                .y(function (d) { return y(d.b); });
+                .x(d => x(d.a))
+                .y(d => y(d.b));
 
         // Drawing Lines for each segments
         const segment = svg.selectAll(".segment")
@@ -58,8 +58,8 @@ class BarChart extends Component {
                 .attr("class", "line")
                 .attr("transform", "translate(20," + margin +")")
                 .attr("visible",1)
-                .attr("d", function (d) { return line(d.coordinates); })
-                .style("stroke", function (d) { return d.color; });
+                .attr("d", d => line(d.coordinates))
+                .style("stroke", d => d.color);
 
       // Draw X and Y axis
       //Drawing X Axis
@@ -89,8 +89,8 @@ class BarChart extends Component {
                     .enter().append("circle")
                     .attr('transform', 'translate(20, ' + margin +')')
                     .attr("r", 5)
-                    .attr("cx", function (d) { console.log(d); return x(d.a); })
-                    .attr("cy", function (d) { return y(d.b); })
+                    .attr("cx", d => x(d.a))
+                    .attr("cy", d => y(d.b))
                     .style("fill", "transparent")
                     .style("stroke-width", "5")
                     .style("stroke",  function (d) { return this.parentNode.__data__.color; })
