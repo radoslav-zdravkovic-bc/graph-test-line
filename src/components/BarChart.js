@@ -6,30 +6,47 @@ class BarChart extends Component {
     componentDidMount() {
       this.drawChart();
     }
+    componentDidUpdate(){
+      this.refs.graph.innerHTML = '';
+      this.drawChart();
+    }
+
+    calculateMaxMinValues(data){
+      const returnValue = {
+        "minA": 1000,
+        "maxA": 0,
+        "minB": 1000,
+        "maxB": 0
+      };
+      data.forEach(d => {
+        d.coordinates.forEach(el => {
+          if(el.a < returnValue.minA) returnValue.minA = el.a;
+          if(el.b < returnValue.minB) returnValue.minB = el.b;
+          if(el.a > returnValue.maxA) returnValue.maxA = el.a;
+          if(el.b > returnValue.maxB) returnValue.maxB = el.b;
+        })
+      });
+      return returnValue;
+    }
 
     drawChart() {
         // LINE CHART
         const {data, width, height} = this.props;
         const margin = 20;
 
-        let singleData = [...data[0].coordinates];
+        const marginValeus = this.calculateMaxMinValues(data);
 
-
-        const h = height - 2 * margin, w = width - 2 * margin;
-
-        //number formatter
-        //const xFormat = d3.format('.2');
-
-        //const color = d3.scaleOrdinal(d3.schemeCategory10);
+        const h = height - 2 * margin;
+        const w = width - 2 * margin;
 
         //x scale
         const x = d3.scaleLinear()
-        .domain(d3.extent(singleData, d => d.a)) //domain: [min,max] of a
+        .domain([marginValeus.minA, marginValeus.maxA]) //domain: [min,max] of a
         .range([margin, w]);
 
         //y scale
         const y = d3.scaleLinear()
-        .domain([0, d3.max(singleData, d => d.b)]) // domain [0,max] of b (start from 0)
+        .domain([marginValeus.minB, marginValeus.maxB]) // domain [0,max] of b (start from 0)
         .range([h, margin]);
 
         var xAxis = d3.axisBottom(x).scale(x);
@@ -41,8 +58,8 @@ class BarChart extends Component {
         //line generator: each point is [x(d.a), y(d.b)] where d is a row in data
         // and x, y are scales (e.g. x(10) returns pixel value of 10 scaled by x)
         const svg = d3.select("#graph").append("svg")
-                .attr("width", "700")
-                .attr("height", "540");
+                .attr("width", width + 2 * margin)
+                .attr("height", height + 2 * margin);
 
         const line = d3.line()
                 .x(d => x(d.a))
@@ -83,16 +100,15 @@ class BarChart extends Component {
         .style("stroke", '#000')
         .style("stroke-width", "1px");
 
-
       segment.selectAll("dot")
                     .data(function (d) { return d.coordinates; })
                     .enter().append("circle")
                     .attr('transform', 'translate(20, ' + margin +')')
-                    .attr("r", 5)
+                    .attr("r", 2)
                     .attr("cx", d => x(d.a))
                     .attr("cy", d => y(d.b))
                     .style("fill", "transparent")
-                    .style("stroke-width", "5")
+                    .style("stroke-width", "2")
                     .style("stroke",  function (d) { return this.parentNode.__data__.color; })
                     .on("mouseover", mouseover)
                     .on("mousemove", function (d) {
@@ -118,12 +134,11 @@ class BarChart extends Component {
                 .duration(500)
                 .style("opacity", 1e-6);
         }
-
     }
 
     render(){
         return  (
-          <div id="graph"></div>
+          <div id="graph" ref='graph'></div>
         );
     }
 
