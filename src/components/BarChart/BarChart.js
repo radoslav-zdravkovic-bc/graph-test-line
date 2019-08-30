@@ -57,7 +57,7 @@ class BarChart extends Component {
 
         //line generator: each point is [x(d.a), y(d.b)] where d is a row in data
         // and x, y are scales (e.g. x(10) returns pixel value of 10 scaled by x)
-        const svg = d3.select("#graph").append("svg")
+        let svg = d3.select("#graph").append("svg")
                 .attr("width", width + 2 * margin)
                 .attr("height", height + 2 * margin);
 
