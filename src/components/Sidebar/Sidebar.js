@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import Candidate from './Candidate/Candidate';
 
 class Sidebar extends Component {
-    componentDidMount() {
+    componentWillMount() {
         const candidatesData = require('../../data/candidates.json');
 
         function getFullName(item) {
@@ -13,9 +14,14 @@ class Sidebar extends Component {
     }
 
     render() {
+        let output = this.canidatesNames;
+
+        console.log(output);
         return (
             <div className="graph-sidebar">
-                {this.canidatesNames}
+                {output.map((candidateName) =>
+                    <Candidate name={candidateName} key={candidateName} />
+                    )}
             </div>
         );
     }
