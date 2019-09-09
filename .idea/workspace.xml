@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/US-favicon-min.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/chart_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-US.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/us_elections_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/us_elections_background_new.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/us_elections_background_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_graph.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_legend.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_root.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Legend/Legend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sidebar/Candidate/Candidate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/candidates.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,7 +67,8 @@
       <option name="presentableId" value="Default" />
       <updated>1567148124031</updated>
       <workItem from="1567148125161" duration="20432000" />
-      <workItem from="1567755588582" duration="295000" />
+      <workItem from="1567755588582" duration="10619000" />
+      <workItem from="1568012886712" duration="1005000" />
     </task>
     <servers />
   </component>

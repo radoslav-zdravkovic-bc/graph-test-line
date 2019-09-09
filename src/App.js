@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import BarChart from './components/BarChart/BarChart';
 import Sidebar from './components/Sidebar/Sidebar';
 import Legend from './components/Legend/Legend';
 import _ from './../node_modules/lodash'
 import Container from 'react-bootstrap/Container'
-import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import './App.scss';
 
