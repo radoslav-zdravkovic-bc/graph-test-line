@@ -2,109 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Al Gore.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Alex Jones.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Amy Klobuchar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Andrew Cuomo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Andrew D. Basiago.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Andrew Gillum.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Andrew Yang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Angelina Jolie.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Ben Sasse.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Ben Shapiro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Bernie Sanders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Beto O'Rourke.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Biden-opened.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Biden.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Bill de Blasio.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Bob Iger.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Carly Fiorina.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Charlie Baker.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Chelsea Clinton.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Chris Christie.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Chris Murphy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Cory Booker.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Cynthia Nixon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Deval Patrick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Dick Cheney.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Donald Trump.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Dwayne Johnson.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Elizabeth Warren.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Ellen DeGeneres.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Eric Garcetti.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Eric Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Eric Swalwell.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Evan McMullin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Gavin Newsom.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/George Clooney.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/George Prescott Bush.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/H.R. McMaster.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Hillary Clinton.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Howard Schultz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Ivanka Trump.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Jamie Dimon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Jason Kander.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Jeb Bush.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Jeff Flake.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Joe Biden.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Joe Kennedy III.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Joe Rogan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/John Cena.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/John Delaney.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/John Hickenlooper.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/John Kasich.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/John Kerry.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/John McAfee.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Jon Favreau.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Julian Castro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Kamala Harris.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Kanye West.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Keith Ellison.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Kirsten Gillibrand.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/LeBron James.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Leonardo DiCaprio.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Marco Rubio.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Mark Cuban.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Mark Zuckerberg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Martin Heinrich.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Martin O'Malley.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Michael Bloomberg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Michelle Obama.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Mike Flynn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Mike Pence.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Mitch Landrieu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Mitt Romney.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Nancy Pelosi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Nikki Haley.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Oprah Winfrey.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Paul Ryan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Peter Buttigieg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Rand Paul.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Richard Ojeda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Rick Scott.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Rob Portman.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Rufus Gifford.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Sarah Huckabee Sanders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Sarah Palin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Scott Walker.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Seth Moulton.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Sherrod Brown.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Steve Bannon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Steve Bullock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tammy Baldwin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tammy Duckworth.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Ted Cruz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Terry McAuliffe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tim Cook.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tim Kaine.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tim Ryan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tim Scott.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tom Cotton.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tom Steyer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Trey Gowdy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/Tulsi Gabbard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/candidates/William McRaven.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Black.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Book.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Ultra.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueCondensedBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/OpenSans-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/up.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Candidate/Candidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Candidate/Candidate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/candidates.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/candidates.json" afterDir="false" />
@@ -126,7 +40,7 @@
   <component name="ProjectId" id="1Q8NB48DcQWAXNla7TMEySKFntP" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images/candidates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -134,8 +48,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets/images/candidates" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/assets/fonts" />
+      <recent name="$PROJECT_DIR$/src/assets/images/candidates" />
       <recent name="$PROJECT_DIR$/src/assets/scss/bootstrap" />
       <recent name="$PROJECT_DIR$/src/assets/scss" />
     </key>
@@ -168,7 +83,8 @@
       <updated>1567148124031</updated>
       <workItem from="1567148125161" duration="20432000" />
       <workItem from="1567755588582" duration="10619000" />
-      <workItem from="1568012886712" duration="6224000" />
+      <workItem from="1568012886712" duration="16558000" />
+      <workItem from="1568095669135" duration="10211000" />
     </task>
     <servers />
   </component>
