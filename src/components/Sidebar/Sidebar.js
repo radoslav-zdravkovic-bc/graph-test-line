@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Candidate from './Candidate/Candidate';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,11 +6,20 @@ import "slick-carousel/slick/slick-theme.css";
 class Sidebar extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {sidebarHover: false};
+        this.setHoverState = this.setHoverState.bind(this);
+
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
         this.slide = this.slide.bind(this);
     }
 
+    setHoverState() {
+        this.setState({
+            sidebarHover: !this.state.sidebarHover
+        });
+    }
     next() {
         this.slider.slickNext();
     }
@@ -28,7 +36,9 @@ class Sidebar extends Component {
 
     componentWillMount() {
         window.addEventListener('wheel', (e) => {
-            this.slide(e.wheelDelta);
+            if(this.state.sidebarHover) {
+                this.slide(e.wheelDelta);
+            }
         })
 
         const candidatesData = require('../../data/candidates.json');
@@ -65,17 +75,24 @@ class Sidebar extends Component {
             ]
         };
         return (
-            <div className="graph-sidebar">
+            <div className="graph-sidebar" onMouseEnter={this.setHoverState} onMouseLeave={this.setHoverState}>
                 <div className="cand-label">
                     <h4 className="bold">SELECT YOUR CANDIDATES</h4>
                 </div>
                 <div className="cand-prev slider-arrow" onClick={this.previous}></div>
                 <Slider ref={c => (this.slider = c)} className="candidates" {...settings}>
                 {output.map((candidateData) =>
-                    <Candidate
-                        name={candidateData.fullName}
-                        color={candidateData.color}
-                        key={candidateData.fullName} />
+                    <div className="cand-view">
+                        <div className="cand-main">
+                            <div className="img-container">
+                                <img alt={candidateData.fullName} src={require("../../assets/images/candidates/" + candidateData.fullName + ".jpg")}/>
+                            </div>
+                            <div className="cand-name">
+                                {candidateData.fullName}
+                            </div>
+                            <div className="marker" style={{backgroundColor: candidateData.fullName}} ></div>
+                        </div>
+                    </div>
                     )}
                 </Slider>
                 <div className="cand-next slider-arrow" onClick={this.next}></div>

@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Black.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Book.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gotham-Ultra.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueCondensedBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Montserrat-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/OpenSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/up.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Candidate/Candidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Candidate/Candidate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Candidate/Candidate.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/candidates.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/candidates.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +23,7 @@
   <component name="ProjectId" id="1Q8NB48DcQWAXNla7TMEySKFntP" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -84,7 +67,8 @@
       <workItem from="1567148125161" duration="20432000" />
       <workItem from="1567755588582" duration="10619000" />
       <workItem from="1568012886712" duration="16558000" />
-      <workItem from="1568095669135" duration="10211000" />
+      <workItem from="1568095669135" duration="10479000" />
+      <workItem from="1568184150853" duration="2171000" />
     </task>
     <servers />
   </component>
