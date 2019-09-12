@@ -82,7 +82,7 @@
   }
   .slick-track {
     .slick-slide {
-      border: none;
+      border-bottom: 1px solid #fff;
     }
   }
   .cand-view {
@@ -91,6 +91,15 @@
     position: relative;
     &:hover {
       cursor: pointer;
+    }
+    &.selected {
+      background: #28659C !important;
+      font-family: "Montserrat Bold";
+      .cand-main {
+        .cand-name {
+          color: #fff;
+        }
+      }
     }
     .cand-main {
       display: flex;

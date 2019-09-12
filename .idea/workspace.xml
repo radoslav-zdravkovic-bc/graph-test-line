@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Candidate/Candidate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,6 +29,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -68,7 +70,10 @@
       <workItem from="1567755588582" duration="10619000" />
       <workItem from="1568012886712" duration="16558000" />
       <workItem from="1568095669135" duration="10479000" />
-      <workItem from="1568184150853" duration="2171000" />
+      <workItem from="1568184150853" duration="7093000" />
+      <workItem from="1568194983038" duration="11200000" />
+      <workItem from="1568269939443" duration="8484000" />
+      <workItem from="1568279189358" duration="486000" />
     </task>
     <servers />
   </component>
