@@ -38,9 +38,11 @@ class Sidebar extends Component {
         this.output = [...output1, ...output2];
     }
 
+    // Check if hovered over sidebar in order to prevent or enable scroll
     setHoverState() {
+        let hoverState = this.state.sidebarHover;
         this.setState({
-            sidebarHover: !this.state.sidebarHover
+            sidebarHover: !hoverState
         });
     }
 

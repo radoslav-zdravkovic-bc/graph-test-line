@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_graph.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_graph.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,7 +74,8 @@
       <workItem from="1568184150853" duration="7093000" />
       <workItem from="1568194983038" duration="11200000" />
       <workItem from="1568269939443" duration="8484000" />
-      <workItem from="1568279189358" duration="486000" />
+      <workItem from="1568279189358" duration="1269000" />
+      <workItem from="1568617900900" duration="12352000" />
     </task>
     <servers />
   </component>

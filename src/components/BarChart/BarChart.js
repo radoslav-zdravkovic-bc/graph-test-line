@@ -104,7 +104,7 @@ class BarChart extends Component {
                     .data(function (d) { return d.coordinates; })
                     .enter().append("circle")
                     .attr('transform', 'translate(20, ' + margin +')')
-                    .attr("r", 2)
+                    .attr("r", 4)
                     .attr("cx", d => x(d.a))
                     .attr("cy", d => y(d.b))
                     .style("fill", "transparent")
@@ -113,14 +113,17 @@ class BarChart extends Component {
                     .on("mouseover", mouseover)
                     .on("mousemove", function (d) {
                         divToolTip
-                        .text("X: " + d.a + ", Y: " + d.b + ", Name: " + this.parentNode.__data__.name)
-                        .style("left", (d3.event.pageX + 15) + "px")
-                        .style("top", (d3.event.pageY - 10) + "px");
+                            .html('<div class="tooltip-inside"><p class="candidate-name">' + this.parentNode.__data__.name + '</p><p class="chance">' + d.a + '</p></div>')
+                            .style("background", "#fff")
+                            .style("width", "184px")
+                            .style("height", "50px")
+                            .style("left", (d3.event.pageX - 92) + "px")
+                            .style("top", (d3.event.pageY - 70) + "px");
                     })
                     .on("mouseout", mouseout);
 
         // Adding Tooltip
-        const divToolTip = d3.select("body").append("div")
+        const divToolTip = d3.select("#graph").append("div")
                     .attr("class", "tooltip")
                     .style("opacity", 1e-6);
 
@@ -138,7 +141,12 @@ class BarChart extends Component {
 
     render(){
         return  (
-          <div id="graph" ref='graph'></div>
+          <div id="graph-container">
+              <div className="chart-header">
+                  <h4 className="chance">CHANCE OF WINNING</h4>
+              </div>
+              <div id="graph" ref='graph'></div>
+          </div>
         );
     }
 
