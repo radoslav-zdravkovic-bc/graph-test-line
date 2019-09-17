@@ -19,7 +19,7 @@ class App extends Component {
       candidatesArray: ["Donald Trump", "Kamala Harris", "Beto O'Rourke", "Joe Biden", "Bernie Sanders", "Peter Buttigieg", "Elizabeth Warren"],
       original: data, 
       source: source,
-      width:  700,
+      width:  100,
       height: 500
     };
 
@@ -41,8 +41,6 @@ class App extends Component {
               candidatesArray: candidatesArrayUpdated
           });
       }
-
-      setTimeout(function(){console.log(this.state.candidatesArray)}.bind(this), 500);
   }
 
   filterResults(){

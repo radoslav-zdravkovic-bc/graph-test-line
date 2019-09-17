@@ -1,7 +1,7 @@
 #graph-container {
   width: auto;
   flex-grow: 1;
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.9);
   .chart-header {
     height: 52px;
     background: #fff;
@@ -30,7 +30,9 @@
     g.segment {
       circle {
         stroke-width: 4 !important;
-        stroke: rgba(255, 255, 255, .85) !important;
+        stroke: rgba(0, 0, 0, .4) !important;
+        fill: rgba(255, 255, 255, .9) !important;
+        fill-opacity: 1;
       }
     }
     .tooltip {
@@ -75,8 +77,9 @@
       }
       .tick {
         line {
-          stroke: rgba(227, 227, 227, .97);
+          stroke: rgba(227, 227, 227, .96);
         }
+        fill-opacity: 1;
         text {
           font-family: "Montserrat Bold";
           color: #9A9A9A;

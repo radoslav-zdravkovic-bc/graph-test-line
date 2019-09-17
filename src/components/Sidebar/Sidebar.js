@@ -61,19 +61,6 @@ class Sidebar extends Component {
     }
     candidateClickHandler(candidate) {
         this.props.action(candidate);
-
-        const candidateIndex = this.state.selectedCandidates.indexOf(candidate);
-        if(candidateIndex <= -1) {
-            this.setState(prevState => ({
-                selectedCandidates: [...prevState.selectedCandidates, candidate]
-            }))
-        } else {
-            let candidatesArrayUpdated = [...this.state.selectedCandidates];
-            candidatesArrayUpdated.splice(candidateIndex, 1);
-            this.setState({
-                selectedCandidates: candidatesArrayUpdated
-            });
-        }
     }
 
     componentWillMount() {
@@ -84,8 +71,14 @@ class Sidebar extends Component {
         })
     }
 
-    render() {
+    componentDidUpdate() {
+        if(this.state.selectedCandidates !== this.props.candidatesList) {
+            this.setState({selectedCandidates: this.props.candidatesList});
+        }
 
+    }
+
+    render() {
         let output = this.output;
 
         var settings = {

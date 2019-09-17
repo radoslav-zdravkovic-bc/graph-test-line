@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/circle_btn.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/_graph.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_graph.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +26,7 @@
   <component name="ProjectId" id="1Q8NB48DcQWAXNla7TMEySKFntP" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -31,16 +34,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/BarChart" />
-      <recent name="$PROJECT_DIR$/src/assets/scss/bootstrap" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/assets/fonts" />
       <recent name="$PROJECT_DIR$/src/assets/images/candidates" />
       <recent name="$PROJECT_DIR$/src/assets/scss/bootstrap" />
       <recent name="$PROJECT_DIR$/src/assets/scss" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/BarChart" />
+      <recent name="$PROJECT_DIR$/src/assets/scss/bootstrap" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -75,7 +78,7 @@
       <workItem from="1568279189358" duration="1269000" />
       <workItem from="1568617900900" duration="17048000" />
       <workItem from="1568645398716" duration="496000" />
-      <workItem from="1568699065789" duration="8820000" />
+      <workItem from="1568699065789" duration="16217000" />
     </task>
     <servers />
   </component>

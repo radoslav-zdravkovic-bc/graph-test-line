@@ -115,13 +115,10 @@ class BarChart extends Component {
                     .attr("r", 4)
                     .attr("cx", d => x(d.a))
                     .attr("cy", d => y(d.b))
-                    .style("fill", "transparent")
-                    .style("stroke-width", "2")
-                    .style("stroke",  function (d) { return this.parentNode.__data__.color; })
                     .on("mouseover", mouseover)
                     .on("mousemove", function (d) {
                         divToolTip
-                            .html('<div class="tooltip-inside"><p class="candidate-name">' + this.parentNode.__data__.name + '</p><p class="chance">' + d.a + '</p></div>')
+                            .html('<div class="tooltip-inside"><p class="candidate-name">' + this.parentNode.__data__.name + '</p><p class="chance">' + d.a + '%</p></div>')
                             .style("background", "#fff")
                             .style("width", "184px")
                             .style("height", "50px")
