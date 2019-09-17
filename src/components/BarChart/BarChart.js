@@ -49,8 +49,12 @@ class BarChart extends Component {
         .domain([marginValeus.minB, marginValeus.maxB]) // domain [0,max] of b (start from 0)
         .range([h, margin]);
 
-        var xAxis = d3.axisBottom(x).scale(x);
-        var yAxis = d3.axisLeft(y).ticks(10);
+        const xAxis = d3.axisBottom(x).scale(x);
+
+        function make_y_gridlines() {
+            return d3.axisLeft(y)
+                .ticks(10)
+        }
 
         // xData gives an array of distinct 'Weeks' for which trends chart is going to be made.
         //const xData = data[0].coordinates.map(d => d.a);
@@ -58,12 +62,29 @@ class BarChart extends Component {
         //line generator: each point is [x(d.a), y(d.b)] where d is a row in data
         // and x, y are scales (e.g. x(10) returns pixel value of 10 scaled by x)
         let svg = d3.select("#graph").append("svg")
-                .attr("width", width + 2 * margin)
-                .attr("height", height + 2 * margin);
+            .attr("width", width + 2 * margin)
+            .attr("height", height + 2 * margin);
 
         const line = d3.line()
                 .x(d => x(d.a))
                 .y(d => y(d.b));
+
+        // Drawing Grid Lines
+        svg.append("g")
+            .attr("transform", "translate(20, 500)")
+            .attr("class", "x axis")
+            .call(xAxis);
+
+        svg.append("g")
+            .attr("class","grid")
+            .style("stroke",("3,3"))
+            .attr("transform", "translate(40, 20)")
+            .call(make_y_gridlines()
+                .tickSize(-width + 3 * margin)
+            )
+            .call(g => g.selectAll(".tick text")
+                .attr("x", -15)
+                .text(function (d) { return d + "%"; }))
 
         // Drawing Lines for each segments
         const segment = svg.selectAll(".segment")
@@ -78,20 +99,7 @@ class BarChart extends Component {
                 .attr("d", d => line(d.coordinates))
                 .style("stroke", d => d.color);
 
-      // Draw X and Y axis
       //Drawing X Axis
-      svg.append("g")
-        .attr("transform", "translate(20, 500)")
-        .attr("class", "x axis")
-        .call(xAxis);
-
-      //Drawing Y Axis
-      svg.append("g")
-        .attr("width", 700)
-        .attr("class", "y axis")
-        .attr("transform", "translate(" + margin +"," + margin +")")
-        .call(yAxis);
-
       svg.selectAll("g.x.axis path, g.y.axis path")
         .style("stroke", '#000')
         .style("stroke-width", "1px");

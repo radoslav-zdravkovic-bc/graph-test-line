@@ -69,5 +69,20 @@
         color: #E92C31;
       }
     }
+    .grid {
+      .domain {
+        display: none;
+      }
+      .tick {
+        line {
+          stroke: rgba(227, 227, 227, .97);
+        }
+        text {
+          font-family: "Montserrat Bold";
+          color: #9A9A9A;
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
