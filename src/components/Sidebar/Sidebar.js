@@ -12,7 +12,7 @@ class Sidebar extends Component {
             selectedCandidates: this.props.candidatesList
         };
 
-        this.setHoverState = this.setHoverState.bind(this);
+        this.setSidebarHoverState = this.setSidebarHoverState.bind(this);
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
         this.slide = this.slide.bind(this);
@@ -39,7 +39,7 @@ class Sidebar extends Component {
     }
 
     // Check if hovered over sidebar in order to prevent or enable scroll
-    setHoverState() {
+    setSidebarHoverState() {
         let hoverState = this.state.sidebarHover;
         this.setState({
             sidebarHover: !hoverState
@@ -109,7 +109,7 @@ class Sidebar extends Component {
             ]
         };
         return (
-            <div className="graph-sidebar" onMouseEnter={this.setHoverState} onMouseLeave={this.setHoverState}>
+            <div className="graph-sidebar" onMouseEnter={this.setSidebarHoverState} onMouseLeave={this.setSidebarHoverState}>
                 <div className="cand-label">
                     <h4 className="bold">SELECT YOUR CANDIDATES</h4>
                 </div>

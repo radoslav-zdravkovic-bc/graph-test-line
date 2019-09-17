@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import BarChart from './components/BarChart/BarChart';
 import Sidebar from './components/Sidebar/Sidebar';
-import Legend from './components/Legend/Legend';
 import _ from './../node_modules/lodash'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -83,19 +82,18 @@ class App extends Component {
 
   render() {
     return (
-      <Container className="App">
-        <button onClick={this.filterResults}>Show last 5 results</button>
-        <button onClick={this.resetResults}>Show All results</button>
-        <Row>
-          <Sidebar action={this.addCandidate} candidatesList={this.state.candidatesArray}/>
-          <BarChart
-              data={this.state.source.data}
-              width={this.state.width}
-              height={this.state.height}
-          />
-          <Legend/>
-        </Row>
-      </Container>
+          <Container className="App">
+            <button onClick={this.filterResults}>Show last 5 results</button>
+            <button onClick={this.resetResults}>Show All results</button>
+            <Row>
+              <Sidebar action={this.addCandidate} candidatesList={this.state.candidatesArray}/>
+              <BarChart
+                  data={this.state.source.data}
+                  width={this.state.width}
+                  height={this.state.height}
+              />
+            </Row>
+          </Container>
     );
   }
 }

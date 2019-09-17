@@ -15,8 +15,11 @@
     "react-axios": "^2.0.3",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.8.6",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.0",
     "react-slick": "^0.25.2",
+    "serve-handler": "^6.1.1",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
