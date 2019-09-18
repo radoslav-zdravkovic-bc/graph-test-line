@@ -9,7 +9,8 @@ class Sidebar extends Component {
 
         this.state = {
             sidebarHover: false,
-            selectedCandidates: this.props.candidatesList
+            selectedCandidates: this.props.candidatesList,
+            rowCandidatesData: this.props.allCandidatesData
         };
 
         this.setSidebarHoverState = this.setSidebarHoverState.bind(this);
@@ -18,14 +19,12 @@ class Sidebar extends Component {
         this.slide = this.slide.bind(this);
         this.candidateClickHandler = this.candidateClickHandler.bind(this);
 
-        const rowCandidatesData = require('../../data/candidates.json');
-
         function getFullName(item) {
             let fullname = {fullName: item.last_name, color: item.color};
             return fullname;
         }
 
-        let candidatesData = rowCandidatesData.candidates.map(getFullName);
+        let candidatesData = this.state.rowCandidatesData.candidates.map(getFullName);
 
         let output1 = candidatesData.filter((value) => {
             return this.state.selectedCandidates.indexOf(value.fullName) > -1;
@@ -75,7 +74,6 @@ class Sidebar extends Component {
         if(this.state.selectedCandidates !== this.props.candidatesList) {
             this.setState({selectedCandidates: this.props.candidatesList});
         }
-
     }
 
     render() {

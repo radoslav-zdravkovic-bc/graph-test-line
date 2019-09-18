@@ -3,6 +3,15 @@ import * as d3 from "d3";
 //import * as scale from "d3-scale";
 
 class BarChart extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            candidatesToDraw: this.props.candidatesList
+        };
+    }
+
     componentDidMount() {
       this.drawChart();
     }
@@ -118,7 +127,7 @@ class BarChart extends Component {
                     .on("mouseover", mouseover)
                     .on("mousemove", function (d) {
                         divToolTip
-                            .html('<div class="tooltip-inside"><p class="candidate-name">' + this.parentNode.__data__.name + '</p><p class="chance">' + d.a + '%</p></div>')
+                            .html('<div class="tooltip-inside"><p class="candidate-name">' + this.parentNode.__data__.name + '</p><p class="chance">' + d.b + '%</p></div>')
                             .style("background", "#fff")
                             .style("width", "184px")
                             .style("height", "50px")
