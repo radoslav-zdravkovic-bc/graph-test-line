@@ -1,0 +1,148 @@
+.graph-sidebar {
+  width: 200px;
+  background: rgba(255,255,255,.99);
+  margin-right: 6px;
+  position: relative;
+  .candidates {
+    visibility: visible;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    height: 616px;
+    padding: 5px 0px 0px 0px;
+    .slick-list {
+      height: 100% !important;
+    }
+    @media (max-width: 991px) {
+      height: 168px;
+      float: left;
+      width: calc(100% - 56px);
+      padding-top: 2px;
+      .slick-track {
+        height: 168px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .slick-slide {
+          height: 33px;
+          width: 220px !important;
+        }
+      }
+    }
+  }
+  .cand-label {
+    height: 52px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    margin-bottom: 6px;
+    h4 {
+      font-family: "Montserrat Bold" !important;
+      color: #28659C;
+      font-size: 12px;
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+      @media (max-width: 991px) {
+        position: absolute;
+        transform: rotate(-90deg);
+        transform-origin: bottom right 0;
+        top: 6px;
+        right: 4px;
+        padding-bottom: 4px;
+      }
+    }
+    @media (max-width: 991px) {
+      width: 52px;
+      height: 168px;
+      margin-right: 4px;
+      float: left;
+    }
+  }
+  .slider-arrow {
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    &.cand-prev {
+      background: #E92C31 url('./assets/images/up.svg') no-repeat;
+      background-position: center center;
+    }
+    &.cand-next {
+      background: #E92C31 url('./assets/images/down.svg') no-repeat;
+      background-position: center center;
+      position: absolute;
+      bottom: 0;
+    }
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  .slick-track {
+    .slick-slide {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  .cand-view {
+    padding-left: 20px;
+    height: auto;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    &.selected {
+      background: #28659C !important;
+      font-family: "Montserrat Bold";
+      .cand-main {
+        .cand-name {
+          color: #fff;
+        }
+      }
+    }
+    .cand-main {
+      display: flex;
+      align-items: center;
+      height: 32px;
+      .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img {
+          width: 19px;
+          height: 19px;
+          border-radius: 50%;
+          border: 1px solid #28659C;
+        }
+        svg {
+          position: absolute;
+          height: 12px;
+          width: 12px;
+        }
+      }
+      .cand-name {
+        line-height: 12px;
+        font-size: 12px;
+        color: #28659C;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      .marker {
+        height: 100%;
+        width: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    height: 168px;
+    width: 100%;
+    margin-right: 4px;
+    margin-bottom: 6px;
+  }
+}
