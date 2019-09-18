@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import * as d3 from "d3";
-//import * as scale from "d3-scale";
 
 class BarChart extends Component {
 
@@ -8,7 +7,7 @@ class BarChart extends Component {
         super(props);
 
         this.state = {
-            candidatesToDraw: this.props.candidatesList
+            candidatesToDraw: this.props.selectedCandidatesData
         };
     }
 
@@ -16,6 +15,10 @@ class BarChart extends Component {
       this.drawChart();
     }
     componentDidUpdate(){
+        if(this.state.candidatesToDraw !== this.props.selectedCandidatesData) {
+            this.setState({candidatesToDraw: this.props.selectedCandidatesData});
+        }
+
       this.refs.graph.innerHTML = '';
       this.drawChart();
     }

@@ -13,13 +13,13 @@ class App extends Component {
     super(props);
     const data = require('./components/BarChart/data.json');
     const source = _.cloneDeep(data);
-    const selectedCandidatesData = ["Donald Trump", "Kamala Harris", "Beto O'Rourke", "Joe Biden", "Bernie Sanders", "Peter Buttigieg", "Elizabeth Warren"];
+    const selectedCandidatesDataInit = ["Donald Trump", "Kamala Harris", "Beto O'Rourke", "Joe Biden", "Bernie Sanders", "Peter Buttigieg", "Elizabeth Warren"];
     const initData = require('./data/candidates.json');
 
     this.state = {
-      selectedCandidatesArray: selectedCandidatesData,
+      selectedCandidatesArray: selectedCandidatesDataInit,
       allCandidatesData: initData,
-      selectedCandidatesData: this.setSelectedCandidatesData(selectedCandidatesData, initData),
+      selectedCandidatesData: this.setSelectedCandidatesData(selectedCandidatesDataInit, initData),
       original: data,
       source: source,
       width:  100,
@@ -56,8 +56,6 @@ class App extends Component {
       let candidatesData = data.candidates.filter(function(item) {
           return selArray.includes(item.last_name);
       });
-
-      console.log(candidatesData);
 
       return candidatesData;
   }
@@ -112,7 +110,7 @@ class App extends Component {
                   data={this.state.source.data}
                   width={this.state.width}
                   height={this.state.height}
-                  candidatesList={this.state.selectedCandidatesArray}
+                  selectedCandidatesData={this.state.selectedCandidatesData}
               />
             </Row>
           </Container>

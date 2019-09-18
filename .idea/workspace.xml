@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +77,7 @@
       <workItem from="1568645398716" duration="496000" />
       <workItem from="1568699065789" duration="17112000" />
       <workItem from="1568725668809" duration="643000" />
-      <workItem from="1568783101170" duration="16540000" />
+      <workItem from="1568783101170" duration="20988000" />
     </task>
     <servers />
   </component>
