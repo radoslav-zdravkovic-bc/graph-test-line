@@ -2,6 +2,12 @@
   width: auto;
   flex-grow: 1;
   background: rgba(255,255,255,.9);
+  display: grid;
+  grid-template-columns: auto 200px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header"
+    "graph legend";
   .chart-header {
     height: 52px;
     background: #fff;
@@ -10,6 +16,7 @@
     align-items: center;
     position: relative;
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    grid-area: header;
     .chance {
       padding-left: 80px;
       font-family: "Montserrat Bold";
@@ -27,6 +34,7 @@
   }
   #graph {
     padding: 50px 0 20px 20px;
+    grid-area: graph;
     g.segment {
       circle {
         stroke-width: 4 !important;
@@ -85,6 +93,26 @@
           color: #9A9A9A;
           font-size: 12px;
         }
+      }
+    }
+  }
+  #legend {
+    padding-top: 50px;
+    padding-right: 50px;
+    grid-area: legend;
+    font-family: "Montserrat";
+    font-size: 12px;
+    color: #28659C;
+    .legendElement {
+      display: grid;
+      grid-template-columns: auto 31px;
+      justify-content: space-between;
+      grid-template-areas:
+        "name chance";
+      padding-bottom: 5px;
+      .legendElementChance {
+        font-family: "Montserrat Bold";
+        color: #E92C31;
       }
     }
   }

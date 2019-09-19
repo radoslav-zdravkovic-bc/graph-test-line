@@ -17,6 +17,7 @@ class BarChart extends Component {
     componentDidUpdate(){
         if(this.state.candidatesToDraw !== this.props.selectedCandidatesData) {
             this.setState({candidatesToDraw: this.props.selectedCandidatesData});
+            console.log(this.props.selectedCandidatesData);
         }
 
       this.refs.graph.innerHTML = '';
@@ -46,19 +47,19 @@ class BarChart extends Component {
         const {data, width, height} = this.props;
         const margin = 20;
 
-        const marginValeus = this.calculateMaxMinValues(data);
+        const marginValues = this.calculateMaxMinValues(data);
 
         const h = height - 2 * margin;
         const w = width - 2 * margin;
 
         //x scale
         const x = d3.scaleLinear()
-        .domain([marginValeus.minA, marginValeus.maxA]) //domain: [min,max] of a
+        .domain([marginValues.minA, marginValues.maxA]) //domain: [min,max] of a
         .range([margin, w]);
 
         //y scale
         const y = d3.scaleLinear()
-        .domain([marginValeus.minB, marginValeus.maxB]) // domain [0,max] of b (start from 0)
+        .domain([marginValues.minB, marginValues.maxB]) // domain [0,max] of b (start from 0)
         .range([h, margin]);
 
         const xAxis = d3.axisBottom(x).scale(x);
@@ -74,7 +75,7 @@ class BarChart extends Component {
         //line generator: each point is [x(d.a), y(d.b)] where d is a row in data
         // and x, y are scales (e.g. x(10) returns pixel value of 10 scaled by x)
         let svg = d3.select("#graph").append("svg")
-            .attr("width", width + 2 * margin)
+            .attr("width", width)
             .attr("height", height + 2 * margin);
 
         const line = d3.line()
@@ -163,6 +164,14 @@ class BarChart extends Component {
                   <h4 className="chance">CHANCE OF WINNING</h4>
               </div>
               <div id="graph" ref='graph'></div>
+              <div id="legend">
+                      {this.state.candidatesToDraw.map((candidateData) =>
+                          <div className="legendElement" key={candidateData.last_name}>
+                              <div className="legendElementName">{candidateData.last_name}</div>
+                              <div className="legendElementChance">{candidateData.chance_development.split(",")[0]}</div>
+                          </div>
+                      )}
+              </div>
           </div>
         );
     }

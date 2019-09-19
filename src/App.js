@@ -82,7 +82,7 @@ class App extends Component {
   updateDimensions() {
       let element = document.getElementById('graph');
       let positionInfo = element.getBoundingClientRect();
-      let update_width  = positionInfo.width - 100;
+      let update_width  = positionInfo.width - 50;
       this.setState({ width: update_width/*, height: update_height*/ });
   }
 
