@@ -8,6 +8,16 @@
   grid-template-areas:
     "header header"
     "graph legend";
+  @media (max-width: 767px) {
+    grid-template-columns: auto 140px;
+  }
+  @media (max-width: 500px) {
+    grid-template-areas:
+            "header"
+            "graph"
+            "legend";
+    grid-template-columns: 100%;
+  }
   .chart-header {
     height: 52px;
     background: #fff;
@@ -35,6 +45,9 @@
   #graph {
     padding: 50px 0 20px 20px;
     grid-area: graph;
+    @media (max-width: 500px) {
+      padding: 0 0 20px 20px;
+    }
     g.segment {
       circle {
         stroke-width: 4 !important;
@@ -110,10 +123,30 @@
       grid-template-areas:
         "name chance";
       padding-bottom: 5px;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
       .legendElementChance {
         font-family: "Montserrat Bold";
         color: #E92C31;
+        text-align: right;
+        color: #000;
       }
+    }
+    @media (max-width: 767px) {
+      padding-right: 10px;
+      font-size: 11px;
+    }
+    @media (max-width: 500px) {
+      display: grid;
+      padding: 0 20px 20px;
+      grid-template-columns: auto auto auto;
+      grid-column-gap: 30px;
+    }
+    @media (max-width: 400px) {
+      grid-template-columns: auto auto;
+      grid-column-gap: 30px;
     }
   }
 }

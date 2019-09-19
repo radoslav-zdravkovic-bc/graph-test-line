@@ -89,7 +89,7 @@ class Sidebar extends Component {
             cssEase: "linear",
             responsive: [
                 {
-                    breakpoint: 992,
+                    breakpoint: 1201,
                     settings: {
                         vertical: false,
                         slidesToScroll: 5,

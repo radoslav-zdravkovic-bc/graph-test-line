@@ -13,7 +13,7 @@
     .slick-list {
       height: 100% !important;
     }
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       height: 168px;
       float: left;
       width: calc(100% - 56px);
@@ -46,7 +46,7 @@
       line-height: 1;
       margin: 0;
       text-align: center;
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         position: absolute;
         transform: rotate(-90deg);
         transform-origin: bottom right 0;
@@ -55,7 +55,7 @@
         padding-bottom: 4px;
       }
     }
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       width: 52px;
       height: 168px;
       margin-right: 4px;
@@ -76,7 +76,7 @@
       position: absolute;
       bottom: 0;
     }
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       display: none;
     }
   }
@@ -139,7 +139,7 @@
       }
     }
   }
-  @media (max-width: 991px) {
+  @media (max-width: 1200px) {
     height: 168px;
     width: 100%;
     margin-right: 4px;
