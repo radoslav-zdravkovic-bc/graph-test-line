@@ -107,6 +107,7 @@ class App extends Component {
                   allCandidatesData={this.state.allCandidatesData}
               />
               <BarChart
+                  action={this.addCandidate}
                   data={this.state.source.data}
                   width={this.state.width}
                   height={this.state.height}

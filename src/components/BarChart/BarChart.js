@@ -9,6 +9,8 @@ class BarChart extends Component {
         this.state = {
             candidatesToDraw: this.props.selectedCandidatesData
         };
+
+        this.legendElementClickHandler = this.legendElementClickHandler.bind(this);
     }
 
     componentDidMount() {
@@ -22,6 +24,10 @@ class BarChart extends Component {
 
       this.refs.graph.innerHTML = '';
       this.drawChart();
+    }
+
+    legendElementClickHandler(candidate) {
+        this.props.action(candidate);
     }
 
     calculateMaxMinValues(data){
@@ -166,7 +172,10 @@ class BarChart extends Component {
               <div id="graph" ref='graph'></div>
               <div id="legend">
                       {this.state.candidatesToDraw.map((candidateData) =>
-                          <div className="legendElement" key={candidateData.last_name}>
+                          <div className="legendElement"
+                               key={candidateData.last_name}
+                               onClick={() => this.legendElementClickHandler(candidateData.last_name)}
+                               >
                               <div className="legendElementName">{candidateData.last_name}</div>
                               <div className="legendElementChance">{candidateData.chance_development.split(",")[0]}</div>
                           </div>
