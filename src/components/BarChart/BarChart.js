@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import * as d3 from "d3";
-import * as timeFormat from "d3-time-format";
 
 class BarChart extends Component {
 
@@ -8,7 +7,8 @@ class BarChart extends Component {
         super(props);
 
         this.state = {
-            candidatesToDraw: this.props.selectedCandidatesData
+            candidatesToDraw: this.props.selectedCandidatesData,
+            allCandidates: this.props.data
         };
 
         this.legendElementClickHandler = this.legendElementClickHandler.bind(this);
@@ -43,13 +43,14 @@ class BarChart extends Component {
           if(el.y < returnValue.minY) returnValue.minY = el.y;
           if(el.x > returnValue.maxX) returnValue.maxX = el.x;
           if(el.y > returnValue.maxY) returnValue.maxY = el.y;
+
+
         })
       });
       return returnValue;
     }
 
     drawChart() {
-
         // LINE CHART
         const {data, width, height} = this.props;
         const margin = 20;
@@ -69,15 +70,16 @@ class BarChart extends Component {
         .domain([marginValues.minY, marginValues.maxY]) // domain [0,max] of b (start from 0)
         .range([h, margin]);
 
-        const xAxis = d3.axisBottom(x).scale(x);
+        const xAxis = d3.axisBottom(x)
+            .scale(x)
+            .tickValues(d3.range(marginValues.minX, marginValues.maxX, 6))
+
+
 
         function make_y_gridlines() {
             return d3.axisLeft(y)
                 .ticks(10)
         }
-
-        // xData gives an array of distinct 'Weeks' for which trends chart is going to be made.
-        //const xData = data[0].coordinates.map(d => d.a);
 
         //line generator: each point is [x(d.a), y(d.b)] where d is a row in data
         // and x, y are scales (e.g. x(10) returns pixel value of 10 scaled by x)
@@ -93,7 +95,7 @@ class BarChart extends Component {
         svg.append("g")
             .attr("transform", "translate(30, 500)")
             .attr("class", "x axis")
-            .call(xAxis);
+            .call(xAxis)
 
         svg.append("g")
             .attr("class","grid")
