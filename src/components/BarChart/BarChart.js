@@ -20,7 +20,6 @@ class BarChart extends Component {
     componentDidUpdate(){
         if(this.state.candidatesToDraw !== this.props.selectedCandidatesData) {
             this.setState({candidatesToDraw: this.props.selectedCandidatesData});
-            console.log(this.props.selectedCandidatesData);
         }
 
       this.refs.graph.innerHTML = '';
@@ -55,7 +54,7 @@ class BarChart extends Component {
         const {data, width, height} = this.props;
         const margin = 20;
 
-        const marginValues = this.calculateMaxMinValues(data);
+        const marginValues = this.calculateMaxMinValues(this.state.candidatesToDraw);
 
         const h = height - 2 * margin;
         const w = width - 2 * margin;
@@ -109,7 +108,7 @@ class BarChart extends Component {
 
         // Drawing Lines for each segments
         const segment = svg.selectAll(".segment")
-                        .data(data)
+                        .data(this.state.candidatesToDraw)
                         .enter().append("g")
                         .attr("class", "segment");
 
@@ -166,6 +165,7 @@ class BarChart extends Component {
     }
 
     render(){
+
         return  (
           <div id="graph-container">
               <div className="chart-header">
@@ -179,7 +179,7 @@ class BarChart extends Component {
                                onClick={() => this.legendElementClickHandler(candidateData.name)}
                                >
                               <div className="legendElementName">{candidateData.name}</div>
-                              <div className="legendElementChance">{candidateData.data[0].y + "%"}</div>
+                              <div className="legendElementChance">{candidateData.data[candidateData.data.length - 1].y + "%"}</div>
                           </div>
                       )}
               </div>

@@ -45,10 +45,12 @@ class App extends Component {
           let candidatesArrayUpdated = [...this.state.selectedCandidatesArray];
           candidatesArrayUpdated.splice(candidateIndex, 1);
           const candidatesArrayUpdatedData = this.setSelectedCandidatesData(candidatesArrayUpdated, this.state.allCandidatesData);
-          this.setState({
-              selectedCandidatesArray: candidatesArrayUpdated,
-              selectedCandidatesData: candidatesArrayUpdatedData
-          });
+          if(this.state.selectedCandidatesArray.length > 1) {
+              this.setState({
+                  selectedCandidatesArray: candidatesArrayUpdated,
+                  selectedCandidatesData: candidatesArrayUpdatedData
+              });
+          }
       }
   }
 
@@ -65,8 +67,8 @@ class App extends Component {
     let tempdata = _.cloneDeep(this.state.original);
     const keepEl = 5;
     tempdata.data.forEach(d => {
-      let length = d.coordinates.length;
-      d.coordinates = d.coordinates.filter(el => el.a >= length-keepEl)
+      let length = d.data.length;
+      d.data = d.data.filter(el => el.a >= length-keepEl)
     });
     this.setState({
       source: tempdata
