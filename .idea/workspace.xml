@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BarChart/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/candidates.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +29,7 @@
   <component name="ProjectId" id="1Q8NB48DcQWAXNla7TMEySKFntP" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -31,15 +37,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/BarChart" />
+      <recent name="$PROJECT_DIR$/src/assets/scss/bootstrap" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/assets/fonts" />
       <recent name="$PROJECT_DIR$/src/assets/images/candidates" />
-      <recent name="$PROJECT_DIR$/src/assets/scss/bootstrap" />
-      <recent name="$PROJECT_DIR$/src/assets/scss" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/BarChart" />
       <recent name="$PROJECT_DIR$/src/assets/scss/bootstrap" />
     </key>
   </component>
@@ -78,7 +84,10 @@
       <workItem from="1568699065789" duration="17112000" />
       <workItem from="1568725668809" duration="643000" />
       <workItem from="1568783101170" duration="23576000" />
-      <workItem from="1568875934298" duration="15788000" />
+      <workItem from="1568875934298" duration="16701000" />
+      <workItem from="1568957725575" duration="20049000" />
+      <workItem from="1569223232072" duration="1954000" />
+      <workItem from="1569226315335" duration="1539000" />
     </task>
     <servers />
   </component>

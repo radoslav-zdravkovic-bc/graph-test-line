@@ -8,23 +8,20 @@ class Sidebar extends Component {
         super(props);
 
         this.state = {
-            sidebarHover: false,
             selectedCandidates: this.props.candidatesList,
-            rowCandidatesData: this.props.allCandidatesData
+            rowCandidatesData: this.props.allCandidatesData,
         };
 
-        this.setSidebarHoverState = this.setSidebarHoverState.bind(this);
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
-        this.slide = this.slide.bind(this);
         this.candidateClickHandler = this.candidateClickHandler.bind(this);
 
         function getFullName(item) {
-            let fullname = {fullName: item.last_name, color: item.color};
+            let fullname = {fullName: item.name, color: item.color};
             return fullname;
         }
 
-        let candidatesData = this.state.rowCandidatesData.candidates.map(getFullName);
+        let candidatesData = this.state.rowCandidatesData.data.map(getFullName);
 
         let output1 = candidatesData.filter((value) => {
             return this.state.selectedCandidates.indexOf(value.fullName) > -1;
@@ -37,37 +34,15 @@ class Sidebar extends Component {
         this.output = [...output1, ...output2];
     }
 
-    // Check if hovered over sidebar in order to prevent or enable scroll
-    setSidebarHoverState() {
-        let hoverState = this.state.sidebarHover;
-        this.setState({
-            sidebarHover: !hoverState
-        });
-    }
-
     next() {
         this.slider.slickNext();
     }
     previous() {
         this.slider.slickPrev();
     }
-    slide(y){
-        y > 0 ? (
-            this.slider.slickPrev()
-        ) : (
-            this.slider.slickNext()
-        )
-    }
+
     candidateClickHandler(candidate) {
         this.props.action(candidate);
-    }
-
-    componentWillMount() {
-        window.addEventListener('wheel', (e) => {
-            if(this.state.sidebarHover) {
-                this.slide(e.wheelDelta);
-            }
-        })
     }
 
     componentDidUpdate() {
@@ -105,7 +80,7 @@ class Sidebar extends Component {
                     <h4 className="bold">SELECT YOUR CANDIDATES</h4>
                 </div>
                 <div className="cand-prev slider-arrow" onClick={this.previous}></div>
-                <Slider ref={c => (this.slider = c)} className="candidates" {...settings}>
+                <Slider ref={c => this.slider = c} className="candidates" {...settings}>
                     {output.map((candidateData) =>
                         <div className={"cand-view" +
                         ((this.state.selectedCandidates.indexOf(candidateData.fullName) > -1) ? " selected" : "")}

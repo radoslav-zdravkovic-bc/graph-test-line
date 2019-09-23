@@ -11,10 +11,10 @@ class App extends Component {
 
   constructor(props){
     super(props);
-    const data = require('./components/BarChart/data.json');
+    const data = require('./data/data.json');
     const source = _.cloneDeep(data);
     const selectedCandidatesDataInit = ["Donald Trump", "Kamala Harris", "Beto O'Rourke", "Joe Biden", "Bernie Sanders", "Peter Buttigieg", "Elizabeth Warren"];
-    const initData = require('./data/candidates.json');
+    const initData = require('./data/data.json');
 
     this.state = {
       selectedCandidatesArray: selectedCandidatesDataInit,
@@ -53,8 +53,8 @@ class App extends Component {
   }
 
   setSelectedCandidatesData(selArray, data) {
-      let candidatesData = data.candidates.filter(function(item) {
-          return selArray.includes(item.last_name);
+      let candidatesData = data.data.filter(function(item) {
+          return selArray.includes(item.name);
       });
 
       return candidatesData;

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import * as d3 from "d3";
+import * as timeFormat from "d3-time-format";
 
 class BarChart extends Component {
 
@@ -32,23 +33,24 @@ class BarChart extends Component {
 
     calculateMaxMinValues(data){
       const returnValue = {
-        "minA": 1000,
-        "maxA": 0,
-        "minB": 1000,
-        "maxB": 0
+        "minX": 1000,
+        "maxX": 0,
+        "minY": 1000,
+        "maxY": 0
       };
       data.forEach(d => {
-        d.coordinates.forEach(el => {
-          if(el.a < returnValue.minA) returnValue.minA = el.a;
-          if(el.b < returnValue.minB) returnValue.minB = el.b;
-          if(el.a > returnValue.maxA) returnValue.maxA = el.a;
-          if(el.b > returnValue.maxB) returnValue.maxB = el.b;
+        d.data.forEach(el => {
+          if(el.x < returnValue.minX) returnValue.minX = el.x;
+          if(el.y < returnValue.minY) returnValue.minY = el.y;
+          if(el.x > returnValue.maxX) returnValue.maxX = el.x;
+          if(el.y > returnValue.maxY) returnValue.maxY = el.y;
         })
       });
       return returnValue;
     }
 
     drawChart() {
+
         // LINE CHART
         const {data, width, height} = this.props;
         const margin = 20;
@@ -60,12 +62,12 @@ class BarChart extends Component {
 
         //x scale
         const x = d3.scaleLinear()
-        .domain([marginValues.minA, marginValues.maxA]) //domain: [min,max] of a
+        .domain([marginValues.minX, marginValues.maxX]) //domain: [min,max] of a
         .range([margin, w]);
 
         //y scale
         const y = d3.scaleLinear()
-        .domain([marginValues.minB, marginValues.maxB]) // domain [0,max] of b (start from 0)
+        .domain([marginValues.minY, marginValues.maxY]) // domain [0,max] of b (start from 0)
         .range([h, margin]);
 
         const xAxis = d3.axisBottom(x).scale(x);
@@ -85,19 +87,19 @@ class BarChart extends Component {
             .attr("height", height + 2 * margin);
 
         const line = d3.line()
-                .x(d => x(d.a))
-                .y(d => y(d.b));
+                .x(d => x(d.x))
+                .y(d => y(d.y));
 
         // Drawing Grid Lines
         svg.append("g")
-            .attr("transform", "translate(20, 500)")
+            .attr("transform", "translate(30, 500)")
             .attr("class", "x axis")
             .call(xAxis);
 
         svg.append("g")
             .attr("class","grid")
             .style("stroke",("3,3"))
-            .attr("transform", "translate(40, 20)")
+            .attr("transform", "translate(50, 20)")
             .call(make_y_gridlines()
                 .tickSize(-width + 3 * margin)
             )
@@ -113,9 +115,9 @@ class BarChart extends Component {
 
         segment.append("path")
                 .attr("class", "line")
-                .attr("transform", "translate(20," + margin +")")
+                .attr("transform", "translate(30," + margin +")")
                 .attr("visible",1)
-                .attr("d", d => line(d.coordinates))
+                .attr("d", d => line(d.data))
                 .style("stroke", d => d.color);
 
       //Drawing X Axis
@@ -128,16 +130,16 @@ class BarChart extends Component {
         .style("stroke-width", "1px");
 
       segment.selectAll("dot")
-                    .data(function (d) { return d.coordinates; })
+                    .data(function (d) { return d.data; })
                     .enter().append("circle")
-                    .attr('transform', 'translate(20, ' + margin +')')
+                    .attr('transform', 'translate(30, ' + margin +')')
                     .attr("r", 4)
-                    .attr("cx", d => x(d.a))
-                    .attr("cy", d => y(d.b))
+                    .attr("cx", d => x(d.x))
+                    .attr("cy", d => y(d.y))
                     .on("mouseover", mouseover)
                     .on("mousemove", function (d) {
                         divToolTip
-                            .html('<div class="tooltip-inside"><p class="candidate-name">' + this.parentNode.__data__.name + '</p><p class="chance">' + d.b + '%</p></div>')
+                            .html('<div class="tooltip-inside"><p class="candidate-name">' + this.parentNode.__data__.name + '</p><p class="chance">' + d.y + '%</p></div>')
                             .style("background", "#fff")
                             .style("width", "184px")
                             .style("height", "50px")
@@ -173,11 +175,11 @@ class BarChart extends Component {
               <div id="legend">
                       {this.state.candidatesToDraw.map((candidateData) =>
                           <div className="legendElement"
-                               key={candidateData.last_name}
-                               onClick={() => this.legendElementClickHandler(candidateData.last_name)}
+                               key={candidateData.name}
+                               onClick={() => this.legendElementClickHandler(candidateData.name)}
                                >
-                              <div className="legendElementName">{candidateData.last_name}</div>
-                              <div className="legendElementChance">{candidateData.chance_development.split(",")[0]}</div>
+                              <div className="legendElementName">{candidateData.name}</div>
+                              <div className="legendElementChance">{candidateData.data[0].y + "%"}</div>
                           </div>
                       )}
               </div>
