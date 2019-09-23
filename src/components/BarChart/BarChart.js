@@ -43,14 +43,14 @@ class BarChart extends Component {
           if(el.y < returnValue.minY) returnValue.minY = el.y;
           if(el.x > returnValue.maxX) returnValue.maxX = el.x;
           if(el.y > returnValue.maxY) returnValue.maxY = el.y;
-
-
         })
       });
       return returnValue;
     }
 
     drawChart() {
+        console.log(this.props.data[0].data);
+
         // LINE CHART
         const {data, width, height} = this.props;
         const margin = 20;
@@ -73,6 +73,7 @@ class BarChart extends Component {
         const xAxis = d3.axisBottom(x)
             .scale(x)
             .tickValues(d3.range(marginValues.minX, marginValues.maxX, 6))
+            .tickFormat((d) => this.props.data[0].data[d].args.timestamp.title)
 
 
 
