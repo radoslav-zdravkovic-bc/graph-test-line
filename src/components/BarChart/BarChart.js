@@ -73,7 +73,8 @@ class BarChart extends Component {
         const xAxis = d3.axisBottom(x)
             .scale(x)
             .tickValues(d3.range(marginValues.minX, marginValues.maxX, 6))
-            .tickFormat((d) => this.props.data[0].data[d].args.timestamp.title)
+            .tickFormat((d) => this.props.data[0].data[d].args.timestamp.title.substring(0, 3))
+            .tickSize(0)
 
 
 
@@ -131,6 +132,11 @@ class BarChart extends Component {
         .style("stroke", '#000')
         .style("stroke-width", "1px");
 
+        svg.selectAll("g.x.axis g.tick")
+            .style("stroke", '#9A9A9A')
+            .style("stroke-width", "1px")
+            .style("fill-opacity", "0.5")
+
       segment.selectAll("dot")
                     .data(function (d) { return d.data; })
                     .enter().append("circle")
@@ -181,7 +187,7 @@ class BarChart extends Component {
                                key={candidateData.name}
                                onClick={() => this.legendElementClickHandler(candidateData.name)}
                                >
-                              <div className="legendElementName">{candidateData.name}</div>
+                              <div className="legendElementName" style={{ color: candidateData.color }}>{candidateData.name}</div>
                               <div className="legendElementChance">{candidateData.data[candidateData.data.length - 1].y + "%"}</div>
                           </div>
                       )}
