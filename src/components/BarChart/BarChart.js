@@ -12,13 +12,6 @@ class BarChart extends Component {
             allCandidates: this.props.data
         };
 
-        const zoomedCandidates = this.props.selectedCandidatesData;
-        zoomedCandidates.map(d => {
-            d.data = _.remove(d.data, function(n) {
-                return n.x % 6 === 0;
-            });
-        });
-
         this.legendElementClickHandler = this.legendElementClickHandler.bind(this);
     }
 
@@ -65,6 +58,15 @@ class BarChart extends Component {
 
         const h = height - 2 * margin;
         const w = width - 2 * margin;
+
+        // Remove extra dots
+        const zoomedCandidates = this.props.selectedCandidatesData;
+
+        zoomedCandidates.map(d => {
+            d.data = _.remove(d.data, function(n) {
+                return n.x % 6 === 0;
+            });
+        });
 
         //x scale
         const x = d3.scaleLinear()
