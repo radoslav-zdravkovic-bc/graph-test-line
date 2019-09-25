@@ -103,6 +103,11 @@
       background: #28659C !important;
       font-family: "Montserrat Bold";
       .cand-main {
+        .img-container {
+          img {
+            border: 1px solid #ffffff;
+          }
+        }
         .cand-name {
           color: #fff;
         }
