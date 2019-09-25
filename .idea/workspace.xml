@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_sidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +81,7 @@
       <workItem from="1569223232072" duration="1954000" />
       <workItem from="1569226315335" duration="17766000" />
       <workItem from="1569308190307" duration="9948000" />
-      <workItem from="1569392529758" duration="14763000" />
+      <workItem from="1569392529758" duration="14876000" />
     </task>
     <servers />
   </component>

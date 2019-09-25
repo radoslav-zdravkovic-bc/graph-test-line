@@ -15,7 +15,7 @@ class BarChart extends Component {
         const zoomedCandidates = this.props.selectedCandidatesData;
         zoomedCandidates.map(d => {
             d.data = _.remove(d.data, function(n) {
-                return n.x % 2 === 0;
+                return n.x % 6 === 0;
             });
         });
 
