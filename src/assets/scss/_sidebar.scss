@@ -16,8 +16,9 @@
     @media (max-width: 1200px) {
       height: 168px;
       float: left;
-      width: calc(100% - 56px);
+      width: calc(100% - 104px);
       padding-top: 2px;
+      grid-area: slider;
       .slick-track {
         height: 168px;
         display: flex;
@@ -39,6 +40,7 @@
     position: relative;
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
     margin-bottom: 6px;
+    z-index: 9999999;
     h4 {
       font-family: "Montserrat Bold" !important;
       color: #28659C;
@@ -46,20 +48,13 @@
       line-height: 1;
       margin: 0;
       text-align: center;
-      @media (max-width: 1200px) {
-        position: absolute;
-        transform: rotate(-90deg);
-        transform-origin: bottom right 0;
-        top: 6px;
-        right: 4px;
-        padding-bottom: 4px;
-      }
     }
     @media (max-width: 1200px) {
-      width: 52px;
-      height: 168px;
-      margin-right: 4px;
+      width: 100%;
+      height: 52px;
       float: left;
+      margin-bottom: 0;
+      grid-area: label;
     }
   }
   .slider-arrow {
@@ -69,15 +64,27 @@
     &.cand-prev {
       background: #E92C31 url('./assets/images/up.svg') no-repeat;
       background-position: center center;
+      @media (max-width: 1200px) {
+        grid-area: prev;
+        transform: rotate(-90deg);
+        left: -58px;
+      }
     }
     &.cand-next {
       background: #E92C31 url('./assets/images/down.svg') no-repeat;
       background-position: center center;
-      position: absolute;
-      bottom: 0;
+      @media (max-width: 1200px) {
+        transform: rotate(-90deg);
+        right: -58px;
+        grid-area: next;
+      }
     }
     @media (max-width: 1200px) {
-      display: none;
+      width: 168px;
+      height: 52px;
+      position: absolute;
+      bottom: 58px;
+      z-index: 999;
     }
   }
   .slick-track {
@@ -140,9 +147,13 @@
     }
   }
   @media (max-width: 1200px) {
-    height: 168px;
+    height: 220px;
     width: 100%;
-    margin-right: 4px;
+    margin-right: 0;
     margin-bottom: 6px;
+    display: grid;
+    grid-template-areas:
+      "label label label"
+      "prev slider next";
   }
 }

@@ -49,10 +49,8 @@ class BarChart extends Component {
     }
 
     drawChart() {
-        console.log(this.props.data[0].data);
-
         // LINE CHART
-        const {data, width, height} = this.props;
+        const {width, height} = this.props;
         const margin = 20;
 
         const marginValues = this.calculateMaxMinValues(this.state.candidatesToDraw);
@@ -73,10 +71,8 @@ class BarChart extends Component {
         const xAxis = d3.axisBottom(x)
             .scale(x)
             .tickValues(d3.range(marginValues.minX, marginValues.maxX, 6))
-            .tickFormat((d) => this.props.data[0].data[d].args.timestamp.title.substring(0, 3))
+            .tickFormat((d) => this.state.allCandidates[0].data[d].args.timestamp.title.substring(0, 3))
             .tickSize(0)
-
-
 
         function make_y_gridlines() {
             return d3.axisLeft(y)
@@ -138,7 +134,7 @@ class BarChart extends Component {
             .style("fill-opacity", "0.5")
 
       segment.selectAll("dot")
-                    .data(function (d) { return d.data; })
+                    .data(d => d.data)
                     .enter().append("circle")
                     .attr('transform', 'translate(30, ' + margin +')')
                     .attr("r", 4)

@@ -53,14 +53,15 @@ class Sidebar extends Component {
 
     render() {
         let output = this.output;
+        let counter = 0;
 
-        var settings = {
+        let settings = {
             vertical: true,
             arrows: false,
             speed: 500,
             slidesToScroll: 5,
             slidesToShow: 4,
-            infinite: true,
+            infinite: false,
             cssEase: "linear",
             responsive: [
                 {
@@ -68,8 +69,7 @@ class Sidebar extends Component {
                     settings: {
                         vertical: false,
                         slidesToScroll: 5,
-                        slidesToShow: 20,
-                        infinite: true,
+                        slidesToShow: 15,
                     },
                 },
             ]

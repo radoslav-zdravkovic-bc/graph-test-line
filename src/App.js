@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import BarChart from './components/BarChart/BarChart';
 import Sidebar from './components/Sidebar/Sidebar';
 import _ from './../node_modules/lodash'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
 import './App.scss';
 
 
@@ -14,12 +12,11 @@ class App extends Component {
     const data = require('./data/data.json');
     const source = _.cloneDeep(data);
     const selectedCandidatesDataInit = ["Donald Trump", "Kamala Harris", "Beto O'Rourke", "Joe Biden", "Bernie Sanders", "Peter Buttigieg", "Elizabeth Warren"];
-    const initData = require('./data/data.json');
 
     this.state = {
       selectedCandidatesArray: selectedCandidatesDataInit,
-      allCandidatesData: initData,
-      selectedCandidatesData: this.setSelectedCandidatesData(selectedCandidatesDataInit, initData),
+      allCandidatesData: data,
+      selectedCandidatesData: this.setSelectedCandidatesData(selectedCandidatesDataInit, data),
       original: data,
       source: source,
       width:  100,
@@ -99,10 +96,10 @@ class App extends Component {
 
   render() {
     return (
-          <Container className="App">
+          <div className="App">
             <button onClick={this.filterResults}>Show last 5 results</button>
             <button onClick={this.resetResults}>Show All results</button>
-            <Row>
+            <div className="bc-graph-app-row">
               <Sidebar
                   action={this.addCandidate}
                   candidatesList={this.state.selectedCandidatesArray}
@@ -115,8 +112,8 @@ class App extends Component {
                   height={this.state.height}
                   selectedCandidatesData={this.state.selectedCandidatesData}
               />
-            </Row>
-          </Container>
+            </div>
+          </div>
     );
   }
 }
