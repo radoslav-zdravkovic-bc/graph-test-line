@@ -16,7 +16,6 @@
     @media (max-width: 1200px) {
       height: 168px;
       float: left;
-      width: calc(100% - 104px);
       padding-top: 2px;
       grid-area: slider;
       .slick-track {
@@ -96,6 +95,7 @@
     padding-left: 20px;
     height: auto;
     position: relative;
+    outline: none;
     &:hover {
       cursor: pointer;
     }
@@ -155,5 +155,6 @@
     grid-template-areas:
       "label label label"
       "prev slider next";
+    grid-template-columns: 52px auto 52px;
   }
 }

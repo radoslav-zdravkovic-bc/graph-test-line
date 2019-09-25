@@ -71,6 +71,14 @@ class Sidebar extends Component {
                         slidesToShow: 15,
                     },
                 },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        vertical: false,
+                        slidesToScroll: 5,
+                        slidesToShow: 10,
+                    },
+                },
             ]
         };
         return (

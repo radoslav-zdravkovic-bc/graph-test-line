@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import _ from './../../../node_modules/lodash'
 import * as d3 from "d3";
 
 class BarChart extends Component {
@@ -10,6 +11,13 @@ class BarChart extends Component {
             candidatesToDraw: this.props.selectedCandidatesData,
             allCandidates: this.props.data
         };
+
+        const zoomedCandidates = this.props.selectedCandidatesData;
+        zoomedCandidates.map(d => {
+            d.data = _.remove(d.data, function(n) {
+                return n.x % 2 === 0;
+            });
+        });
 
         this.legendElementClickHandler = this.legendElementClickHandler.bind(this);
     }
