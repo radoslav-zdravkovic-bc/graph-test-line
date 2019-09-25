@@ -53,7 +53,6 @@ class Sidebar extends Component {
 
     render() {
         let output = this.output;
-        let counter = 0;
 
         let settings = {
             vertical: true,
@@ -81,21 +80,26 @@ class Sidebar extends Component {
                 </div>
                 <div className="cand-prev slider-arrow" onClick={this.previous}></div>
                 <Slider ref={c => this.slider = c} className="candidates" {...settings}>
-                    {output.map((candidateData) =>
+                    {output.map((candidateData, index) => {
+                        return (
                         <div className={"cand-view" +
                         ((this.state.selectedCandidates.indexOf(candidateData.fullName) > -1) ? " selected" : "")}
                              value={candidateData.fullName} key={candidateData.fullName}
                              onClick={() => this.candidateClickHandler(candidateData.fullName)}>
                             <div className="cand-main">
                                 <div className="img-container">
-                                    <img alt={candidateData.fullName} src={require("../../assets/images/candidates/" + candidateData.fullName + ".jpg")}/>
+                                    <img alt={candidateData.fullName}
+                                         src={require("../../assets/images/candidates/" + candidateData.fullName + ".jpg")}/>
                                 </div>
                                 <div className="cand-name">
                                     {candidateData.fullName}
                                 </div>
-                                <div className="marker" style={{ backgroundColor: this.state.selectedCandidates.indexOf(candidateData.fullName) > -1 ? candidateData.color : "#fff" }} ></div>
+                                <div className="marker"
+                                     style={{backgroundColor: this.state.selectedCandidates.indexOf(candidateData.fullName) > -1 ? candidateData.color : "#fff"}}></div>
                             </div>
                         </div>
+                        )
+                    }
                     )}
                 </Slider>
                 <div className="cand-next slider-arrow" onClick={this.next}></div>
