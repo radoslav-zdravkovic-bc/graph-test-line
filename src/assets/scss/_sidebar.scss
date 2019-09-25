@@ -23,10 +23,6 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        .slick-slide {
-          height: 33px;
-          width: 220px !important;
-        }
       }
     }
   }
@@ -91,11 +87,15 @@
       border-bottom: 1px solid #fff;
     }
   }
+  .candidates-group {
+    outline: none;
+  }
   .cand-view {
     padding-left: 20px;
     height: auto;
     position: relative;
     outline: none;
+    margin-bottom: 1px;
     &:hover {
       cursor: pointer;
     }

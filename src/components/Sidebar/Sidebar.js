@@ -58,7 +58,7 @@ class Sidebar extends Component {
             vertical: true,
             arrows: false,
             speed: 500,
-            slidesToScroll: 5,
+            slidesToScroll: 1,
             slidesToShow: 4,
             infinite: false,
             cssEase: "linear",
@@ -67,20 +67,46 @@ class Sidebar extends Component {
                     breakpoint: 1201,
                     settings: {
                         vertical: false,
-                        slidesToScroll: 5,
-                        slidesToShow: 15,
+                        slidesToScroll: 1,
+                        slidesToShow: 3,
                     },
                 },
                 {
                     breakpoint: 768,
                     settings: {
                         vertical: false,
-                        slidesToScroll: 5,
-                        slidesToShow: 10,
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
                     },
                 },
             ]
         };
+
+        const tmpList = [];
+        for(let i = 0; i < output.length; i+=5){
+            const tmpCandidats = [];
+            for(let index = i; index < Math.min(output.length, i+5); index++){
+                tmpCandidats.push (
+                    <div className={"cand-view" +
+                    ((this.state.selectedCandidates.indexOf(output[index].fullName) > -1) ? " selected" : "")}
+                         value={output[index].fullName} key={output[index].fullName}
+                         onClick={() => this.candidateClickHandler(output[index].fullName)}>
+                        <div className="cand-main">
+                            <div className="img-container">
+                                <img alt={output[index].fullName}
+                                     src={require("../../assets/images/candidates/" + output[index].fullName + ".jpg")}/>
+                            </div>
+                            <div className="cand-name">
+                                {output[index].fullName}
+                            </div>
+                            <div className="marker"
+                                 style={{backgroundColor: this.state.selectedCandidates.indexOf(output[index].fullName) > -1 ? output[index].color : "#fff"}}></div>
+                        </div>
+                    </div>
+                );
+            }
+            tmpList.push(<div className="candidates-group">{tmpCandidats}</div>);
+        }
         return (
             <div className="graph-sidebar" onMouseEnter={this.setSidebarHoverState} onMouseLeave={this.setSidebarHoverState}>
                 <div className="cand-label">
@@ -88,27 +114,7 @@ class Sidebar extends Component {
                 </div>
                 <div className="cand-prev slider-arrow" onClick={this.previous}></div>
                 <Slider ref={c => this.slider = c} className="candidates" {...settings}>
-                    {output.map((candidateData, index) => {
-                        return (
-                        <div className={"cand-view" +
-                        ((this.state.selectedCandidates.indexOf(candidateData.fullName) > -1) ? " selected" : "")}
-                             value={candidateData.fullName} key={candidateData.fullName}
-                             onClick={() => this.candidateClickHandler(candidateData.fullName)}>
-                            <div className="cand-main">
-                                <div className="img-container">
-                                    <img alt={candidateData.fullName}
-                                         src={require("../../assets/images/candidates/" + candidateData.fullName + ".jpg")}/>
-                                </div>
-                                <div className="cand-name">
-                                    {candidateData.fullName}
-                                </div>
-                                <div className="marker"
-                                     style={{backgroundColor: this.state.selectedCandidates.indexOf(candidateData.fullName) > -1 ? candidateData.color : "#fff"}}></div>
-                            </div>
-                        </div>
-                        )
-                    }
-                    )}
+                    {tmpList}
                 </Slider>
                 <div className="cand-next slider-arrow" onClick={this.next}></div>
             </div>
