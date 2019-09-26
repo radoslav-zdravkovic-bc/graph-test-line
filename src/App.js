@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import BarChart from './components/BarChart/BarChart';
 import Sidebar from './components/Sidebar/Sidebar';
+import Events from './components/Events/Events';
 import _ from './../node_modules/lodash'
 import './App.scss';
 
@@ -97,8 +98,6 @@ class App extends Component {
   render() {
     return (
           <div className="App">
-            <button onClick={this.filterResults}>Show last 5 results</button>
-            <button onClick={this.resetResults}>Show All results</button>
             <div className="bc-graph-app-row">
               <Sidebar
                   action={this.addCandidate}
@@ -113,6 +112,7 @@ class App extends Component {
                   selectedCandidatesData={this.state.selectedCandidatesData}
               />
             </div>
+            <Events />
           </div>
     );
   }

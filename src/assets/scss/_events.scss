@@ -1,0 +1,41 @@
+#upcoming-events {
+  margin-top: 6px;
+  padding: 10px 0 20px;
+  background: rgba(251, 248, 248, .99);
+  position: relative;
+  .events-labels {
+    padding: 0 0 6px 20px;
+    .upcoming-label {
+      font-size: 20px;
+      color: #28659C;
+      font-family: "Montserrat Bold";
+    }
+  }
+  .events-area {
+    width: calc(100% - 100px);
+    .events-timeline {
+      height: 8px;
+      .events-linebody {
+        float: left;
+        background: #28659C;
+        height: 4px;
+        margin-top: 2px;
+        width: calc(100% - 6px);
+      }
+      .events-point {
+        margin-left: 2px;
+        width: 4px;
+        height: 100%;
+        background: #28659C;
+        float: left;
+      }
+    }
+  }
+  #upcoming-events-line {
+    margin: 4px 0px 0px 20px;
+    width: calc(100% - 20px);
+    height: 54px;
+    float: left;
+    position: relative;
+  }
+}
