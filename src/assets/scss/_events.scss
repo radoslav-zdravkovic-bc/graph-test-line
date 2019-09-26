@@ -40,13 +40,17 @@
   #upcoming-events-line {
     margin: 4px 0px 0px 20px;
     width: calc(100% - 20px);
-    height: 70px;
+    height: 75px;
     position: relative;
     display: flex;
     .ScrollbarsCustom-Scroller {
       overflow: hidden;
       .ScrollbarsCustom-Content {
         display: flex;
+      }
+      .ScrollbarsCustom-TrackX {
+        width: 100%;
+        left: 0;
       }
     }
     .event-box {

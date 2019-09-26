@@ -45,7 +45,7 @@ class Events extends Component {
                         <div className="events-point"></div>
                     </div>
                     <div id="upcoming-events-line" className="events-line">
-                        <Scrollbar>
+                        <Scrollbar disableTracksWidthCompensation={true} scrollLeft={true} noScrollY={true}>
                             {eventsArrayForDisplay}
                         </Scrollbar>
                     </div>
