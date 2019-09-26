@@ -1,0 +1,204 @@
+{
+  "events":[
+    {
+      "id": 1,
+      "date": "2019-06-01",
+      "content": "Democratic Primary Debate"
+    },
+    {
+      "id": 37,
+      "date": "2019-06-26",
+      "content": "Democratic Primary Debates"
+    },
+    {
+      "id": 38,
+      "date": "2019-06-27",
+      "content": "Democratic Primary Debates"
+    },
+    {
+      "id": 2,
+      "date": "2019-07-01",
+      "content": "Democratic Primary Debate"
+    },
+    {
+      "id": 39,
+      "date": "2019-07-30",
+      "content": "Democratic Primary Debates"
+    },
+    {
+      "id": 40,
+      "date": "2019-07-31",
+      "content": "Democratic Primary Debates"
+    },
+    {
+      "id": 4,
+      "date": "2019-08-01",
+      "content": "Democratic Primary Debate"
+    },
+    {
+      "id": 41,
+      "date": "2019-09-12",
+      "content": "Third Primary Debates"
+    },
+    {
+      "id": 42,
+      "date": "2019-09-13",
+      "content": "Third Primary Debates"
+    },
+    {
+      "id": 5,
+      "date": "2019-10-01",
+      "content": "Fourth Democratic Debate"
+    },
+    {
+      "id": 6,
+      "date": "2019-11-01",
+      "content": "Fifth Democratic Debate"
+    },
+    {
+      "id": 54,
+      "date": "2019-12-01",
+      "content": "Sixth Democratic Debate"
+    },
+    {
+      "id": 43,
+      "date": "2020-02-03",
+      "content": "Iowa Caucuses"
+    },
+    {
+      "id": 14,
+      "date": "2020-02-11",
+      "content": "New Hampshire Primary"
+    },
+    {
+      "id": 51,
+      "date": "2020-02-15",
+      "content": "South Carolina Republican Primary"
+    },
+    {
+      "id": 53,
+      "date": "2020-02-22",
+      "content": "Nevada Democratic Caucuses"
+    },
+    {
+      "id": 52,
+      "date": "2020-02-29",
+      "content": "South Carolina Democratic Primary"
+    },
+    {
+      "id": 11,
+      "date": "2020-03-01",
+      "content": "Democratic Primary Debate"
+    },
+    {
+      "id": 15,
+      "date": "2020-03-03",
+      "content": "Super Tuesday (Alabama, California, Massachusetts, North Carolina, Oklahoma, Tennessee, Texas, Vermont, Virginia Primaries)"
+    },
+    {
+      "id": 16,
+      "date": "2020-03-07",
+      "content": "Louisiana Primary"
+    },
+    {
+      "id": 17,
+      "date": "2020-03-10",
+      "content": "Hawaii Caucus; Idaho Michigan, MIssissippi, MIssouri, Ohio Primaries"
+    },
+    {
+      "id": 18,
+      "date": "2020-03-17",
+      "content": "Arizona, Florida, Illinois Primaries"
+    },
+    {
+      "id": 12,
+      "date": "2020-04-01",
+      "content": "Democratic Primary Debate"
+    },
+    {
+      "id": 19,
+      "date": "2020-04-07",
+      "content": "Wisconsin Primary"
+    },
+    {
+      "id": 20,
+      "date": "2020-04-28",
+      "content": "Connecticut, Delaware, Maryland, Pennsylvania, Rhode Island Primaries"
+    },
+    {
+      "id": 21,
+      "date": "2020-05-05",
+      "content": "Indiana Primary"
+    },
+    {
+      "id": 22,
+      "date": "2020-05-12",
+      "content": "Nebraska and West Virginia Primaries"
+    },
+    {
+      "id": 23,
+      "date": "2020-05-19",
+      "content": "Arkansas, Kentucky, Oregon Primaries"
+    },
+    {
+      "id": 24,
+      "date": "2020-05-26",
+      "content": "Washington Primary"
+    },
+    {
+      "id": 25,
+      "date": "2020-06-02",
+      "content": "Montana, New Jersey, New Mexico, South Dakota Primaries"
+    },
+    {
+      "id": 26,
+      "date": "2020-07-13",
+      "content": "Democratic National Convention"
+    },
+    {
+      "id": 27,
+      "date": "2020-07-14",
+      "content": "Democratic National Convention"
+    },
+    {
+      "id": 29,
+      "date": "2020-07-15",
+      "content": "Democratic National Convention"
+    },
+    {
+      "id": 30,
+      "date": "2020-07-16",
+      "content": "Democratic National Convention"
+    },
+    {
+      "id": 31,
+      "date": "2020-08-24",
+      "content": "Republican National Convention"
+    },
+    {
+      "id": 32,
+      "date": "2020-08-25",
+      "content": "Republican National Convention"
+    },
+    {
+      "id": 33,
+      "date": "2020-08-26",
+      "content": "Republican National Convention"
+    },
+    {
+      "id": 34,
+      "date": "2020-08-27",
+      "content": "Republican National Convention"
+    },
+    {
+      "id": 35,
+      "date": "2020-10-28",
+      "content": "One Week To Go"
+    },
+    {
+      "id": 36,
+      "date": "2020-11-03",
+      "content": "Presidential Election"
+    }
+  ]
+}

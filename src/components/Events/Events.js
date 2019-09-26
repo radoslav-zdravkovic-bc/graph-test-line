@@ -1,7 +1,38 @@
 import React, {Component} from 'react';
+import Event from './Event/Event';
+import EventModal from './EventModal/EventModal';
 
 class Events extends Component {
+    constructor(props) {
+        super(props);
+        const eventsData = require('../../data/events.json');
+
+        this.state = {
+            allEvents: eventsData,
+            eventModalDisplay: false,
+            eventModalDate: null,
+            eventModalTitle: ''
+        };
+
+        this.eventsArray = [];
+        Object.keys(this.state.allEvents).forEach((key) => this.eventsArray.push(this.state.allEvents[key]));
+    }
+
     render() {
+        const currentDate = new Date();
+
+        const eventsArrayForDisplay = this.eventsArray[0].map((item) =>  {
+            let d = new Date(item.date)
+            let dString = d.toDateString();
+            let monthAndDay = dString.slice(4, 10);
+            let year = dString.slice(11, 15);
+            let title = item.content;
+
+            if(d > currentDate) {
+                return <Event key={monthAndDay + year} monthAndDay={monthAndDay} year={year} title={title} />;
+            }
+        });
+
         return (
             <div id="upcoming-events" className="bc-graph-app-row">
                 <div className="events-labels">
@@ -12,7 +43,10 @@ class Events extends Component {
                         <div className="events-linebody"></div>
                         <div className="events-point"></div>
                     </div>
-                    <div id="upcoming-events-line" className="events-line"></div>
+                    <div id="upcoming-events-line" className="events-line">
+                        {eventsArrayForDisplay}
+                        <EventModal />
+                    </div>
                 </div>
             </div>
         );
