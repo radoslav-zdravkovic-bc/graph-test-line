@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/events.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_root.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Events/Event/Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Events/Event/Event.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Events/EventModal/EventModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Events/EventModal/EventModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Events/Events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Events/Events.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,7 +88,7 @@
       <workItem from="1569226315335" duration="17766000" />
       <workItem from="1569308190307" duration="9948000" />
       <workItem from="1569392529758" duration="17541000" />
-      <workItem from="1569480280802" duration="14084000" />
+      <workItem from="1569480280802" duration="19264000" />
     </task>
     <servers />
   </component>

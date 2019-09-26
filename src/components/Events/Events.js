@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Event from './Event/Event';
 import EventModal from './EventModal/EventModal';
+import Scrollbar from "react-scrollbars-custom";
 
 class Events extends Component {
     constructor(props) {
@@ -44,8 +45,9 @@ class Events extends Component {
                         <div className="events-point"></div>
                     </div>
                     <div id="upcoming-events-line" className="events-line">
-                        {eventsArrayForDisplay}
-                        <EventModal />
+                        <Scrollbar>
+                            {eventsArrayForDisplay}
+                        </Scrollbar>
                     </div>
                 </div>
             </div>

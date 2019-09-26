@@ -9,10 +9,16 @@
       font-size: 20px;
       color: #28659C;
       font-family: "Montserrat Bold";
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
     }
   }
   .events-area {
     width: calc(100% - 100px);
+    @media (max-width: 767px) {
+      width: calc(100% - 20px);
+    }
     .events-timeline {
       height: 8px;
       .events-linebody {
@@ -34,8 +40,42 @@
   #upcoming-events-line {
     margin: 4px 0px 0px 20px;
     width: calc(100% - 20px);
-    height: 54px;
-    float: left;
+    height: 70px;
     position: relative;
+    display: flex;
+    .ScrollbarsCustom-Scroller {
+      overflow: hidden;
+      .ScrollbarsCustom-Content {
+        display: flex;
+      }
+    }
+    .event-box {
+      background: #FBF8F8;
+      border: 2px solid #28659C;
+      color: #28659C;
+      width: 60px;
+      height: 40px;
+      line-height: 1;
+      box-sizing: border-box;
+      margin-top: 14px;
+      text-transform: uppercase;
+      margin-right: 30px;
+      flex-shrink: 0;
+      cursor: pointer;
+      &:before {
+        content: '';
+        background-color: #28659C;
+        width: 2px;
+        height: 14px;
+        display: block;
+        margin: -16px 0px 0px 25px;
+      }
+      h5 {
+        margin-top: 8px;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
   }
 }
