@@ -15,7 +15,7 @@
     }
   }
   .events-area {
-    width: calc(100% - 100px);
+    width: calc(100% - 40px);
     @media (max-width: 767px) {
       width: calc(100% - 20px);
     }
@@ -39,18 +39,22 @@
   }
   #upcoming-events-line {
     margin: 4px 0px 0px 20px;
-    width: calc(100% - 20px);
+    width: calc(100% - 5px);
     height: 75px;
     position: relative;
     display: flex;
-    .ScrollbarsCustom-Scroller {
+    @media(max-width: 767px) {
+      margin: 4px 0 0 5px;
+      width: 100%;
+    }
+    .ScrollbarsCustom {
       overflow: hidden;
       .ScrollbarsCustom-Content {
         display: flex;
       }
       .ScrollbarsCustom-TrackX {
         width: 100%;
-        left: 0;
+        left: 0 !important;
       }
     }
     .event-box {
@@ -63,7 +67,7 @@
       box-sizing: border-box;
       margin-top: 14px;
       text-transform: uppercase;
-      margin-right: 30px;
+      margin-right: 80px;
       flex-shrink: 0;
       cursor: pointer;
       &:before {
@@ -86,7 +90,7 @@
       color: #28659C;
       border: 1px solid #28659C;
       height: 100%;
-      width: 100%;
+      width: calc(100% - 15px);
       position: absolute;
       display: flex;
       align-items: center;
@@ -94,6 +98,9 @@
       font-family: "Montserrat";
       font-weight: bold;
       text-transform: uppercase;
+      @media(max-width: 767px) {
+        width: 100%;
+      }
       .date-box {
         border: 1px solid #28659C;
         height: 37px;
@@ -104,6 +111,12 @@
         box-sizing: border-box;
         margin-left: 40px;
         display: flex;
+        @media(max-width: 767px) {
+          margin-left: 10px;
+          font-size: 10px;
+          width: 50px;
+          height: 40px;
+        }
         .date {
           margin: auto;
           text-align: center;
@@ -113,6 +126,10 @@
         margin: 0;
         max-width: 50%;
         text-align: center;
+        background: rgba(251, 248, 248, 0.99);
+        @media(max-width: 991px) {
+          font-size: 11px;
+        }
       }
       .event-close {
         width: 100px;
@@ -125,6 +142,9 @@
         outline: none;
         background-size: 35px 35px;
         cursor: pointer;
+        @media(max-width: 767px) {
+          width: 50px;
+        }
       }
     }
   }
