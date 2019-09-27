@@ -11,12 +11,31 @@ class Events extends Component {
         this.state = {
             allEvents: eventsData,
             eventModalDisplay: false,
-            eventModalDate: null,
+            eventModalMonthAndDay: '',
+            eventModalYear: '',
             eventModalTitle: ''
         };
 
         this.eventsArray = [];
         Object.keys(this.state.allEvents).forEach((key) => this.eventsArray.push(this.state.allEvents[key]));
+
+        this.eventOnClickHandler = this.eventOnClickHandler.bind(this);
+        this.eventModalButtonOnClickHandler = this.eventModalButtonOnClickHandler.bind(this);
+    }
+
+    eventOnClickHandler(monthAndDay, year, title) {
+        this.setState({
+            eventModalDisplay: true,
+            eventModalMonthAndDay: monthAndDay,
+            eventModalYear: year,
+            eventModalTitle: title
+        });
+    }
+
+    eventModalButtonOnClickHandler() {
+        this.setState({
+            eventModalDisplay: false
+        });
     }
 
     render() {
@@ -29,10 +48,24 @@ class Events extends Component {
             let year = dString.slice(11, 15);
             let title = item.content;
 
-            if(d > currentDate) {
-                return <Event key={monthAndDay + year} monthAndDay={monthAndDay} year={year} title={title} />;
+            if(d >= currentDate) {
+                return <Event
+                    displayEvent={this.eventOnClickHandler}
+                    key={monthAndDay + year}
+                    monthAndDay={monthAndDay}
+                    year={year}
+                    title={title}
+                />;
             }
         });
+
+        let eventModal;
+
+        if(this.state.eventModalDisplay) {
+            eventModal = <EventModal hideEvent={this.eventModalButtonOnClickHandler} monthAndDay={this.state.eventModalMonthAndDay} year={this.state.eventModalYear} title={this.state.eventModalTitle} />;
+        } else {
+            eventModal = null;
+        }
 
         return (
             <div id="upcoming-events" className="bc-graph-app-row">
@@ -45,9 +78,10 @@ class Events extends Component {
                         <div className="events-point"></div>
                     </div>
                     <div id="upcoming-events-line" className="events-line">
-                        <Scrollbar disableTracksWidthCompensation={true} scrollLeft={true} noScrollY={true}>
+                        <Scrollbar>
                             {eventsArrayForDisplay}
                         </Scrollbar>
+                        {eventModal}
                     </div>
                 </div>
             </div>

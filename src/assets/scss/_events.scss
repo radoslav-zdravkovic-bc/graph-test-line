@@ -81,5 +81,51 @@
         font-size: 12px;
       }
     }
+    .event-opened {
+      background-color: #FBF8F8;
+      color: #28659C;
+      border: 1px solid #28659C;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Montserrat";
+      font-weight: bold;
+      text-transform: uppercase;
+      .date-box {
+        border: 1px solid #28659C;
+        height: 37px;
+        font-size: 12px;
+        width: 70px;
+        height: 50px;
+        line-height: 1;
+        box-sizing: border-box;
+        margin-left: 40px;
+        display: flex;
+        .date {
+          margin: auto;
+          text-align: center;
+        }
+      }
+      .event-text {
+        margin: 0;
+        max-width: 50%;
+        text-align: center;
+      }
+      .event-close {
+        width: 100px;
+        height: 100%;
+        background-image: url(./assets/images/close.svg);
+        background-color: #28659C;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border: none;
+        outline: none;
+        background-size: 35px 35px;
+        cursor: pointer;
+      }
+    }
   }
 }
