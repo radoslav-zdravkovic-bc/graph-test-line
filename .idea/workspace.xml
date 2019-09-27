@@ -4,6 +4,8 @@
     <list default="true" id="1f2eed2a-0b3b-45bf-8ea2-b2f444298db1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/_events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_graph.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_graph.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +86,7 @@
       <workItem from="1569308190307" duration="9948000" />
       <workItem from="1569392529758" duration="17541000" />
       <workItem from="1569480280802" duration="21983000" />
-      <workItem from="1569566981391" duration="13483000" />
+      <workItem from="1569566981391" duration="16064000" />
     </task>
     <servers />
   </component>

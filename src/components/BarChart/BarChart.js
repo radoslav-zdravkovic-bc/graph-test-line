@@ -81,7 +81,7 @@ class BarChart extends Component {
         const xAxis = d3.axisBottom(x)
             .scale(x)
             .tickValues(d3.range(marginValues.minX, marginValues.maxX, 6))
-            .tickFormat((d) => this.state.allCandidates[0].data[d].args.timestamp.title.substring(0, 3))
+            .tickFormat((d) => this.state.allCandidates[0].data[d].args.timestamp.title.substring(0, 3) + ' \'' + this.state.allCandidates[0].data[d].args.timestamp.title.substring(10, 12))
             .tickSize(0)
 
         function make_y_gridlines() {
@@ -93,7 +93,7 @@ class BarChart extends Component {
         // and x, y are scales (e.g. x(10) returns pixel value of 10 scaled by x)
         let svg = d3.select("#graph").append("svg")
             .attr("width", width)
-            .attr("height", height + 2 * margin);
+            .attr("height", height + 3 * margin);
 
         const line = d3.line()
                 .x(d => x(d.x))
@@ -103,7 +103,7 @@ class BarChart extends Component {
         svg.append("g")
             .attr("transform", "translate(30, 500)")
             .attr("class", "x axis")
-            .call(xAxis)
+            .call(xAxis);
 
         svg.append("g")
             .attr("class","grid")
