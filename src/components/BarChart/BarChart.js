@@ -194,7 +194,7 @@ class BarChart extends Component {
                                onClick={() => this.legendElementClickHandler(candidateData.name)}
                                >
                               <div className="legendElementName" style={{ color: candidateData.color }}>{candidateData.name}</div>
-                              <div className="legendElementChance">{candidateData.data[candidateData.data.length - 1].y + "%"}</div>
+                              <div className="legendElementChance">{candidateData.chance}</div>
                           </div>
                       )}
               </div>

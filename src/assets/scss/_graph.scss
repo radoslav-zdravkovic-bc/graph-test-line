@@ -4,7 +4,7 @@
   background: rgba(255,255,255,.9);
   display: grid;
   grid-template-columns: auto 200px;
-  grid-template-rows: auto;
+  grid-template-rows: 52px auto;
   grid-template-areas:
     "header header"
     "graph legend";

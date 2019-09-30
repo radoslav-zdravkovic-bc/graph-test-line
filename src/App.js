@@ -43,12 +43,10 @@ class App extends Component {
           let candidatesArrayUpdated = [...this.state.selectedCandidatesArray];
           candidatesArrayUpdated.splice(candidateIndex, 1);
           const candidatesArrayUpdatedData = this.setSelectedCandidatesData(candidatesArrayUpdated, this.state.allCandidatesData);
-          if(this.state.selectedCandidatesArray.length > 1) {
               this.setState({
                   selectedCandidatesArray: candidatesArrayUpdated,
                   selectedCandidatesData: candidatesArrayUpdatedData
               });
-          }
       }
   }
 
